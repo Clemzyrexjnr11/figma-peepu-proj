@@ -1,15 +1,13 @@
 @tailwind utilities;
 @tailwind components;
 
-@layer utilities{
+@layer components{
 
 .link_holder{
  width: 90vw;
- /* border: 2px solid black; */
  height: fit-content;
  display: flex;
  flex-direction: column;
- /* position: relative; */
 }
 .link_holder .top_section{
     height: fit-content;
@@ -52,9 +50,8 @@
     border-bottom: 1px solid rgb(207, 204, 204);
 }
 .link_holder .mid_section p{
-    color: var(--lite-gray);
-    text-align: center;
-    font-size: 13px;
+
+    @apply text-lite_gray text-center text-[13px]
 }
 .link_holder .mid_section a:hover{
     @apply text-orange_color
@@ -66,10 +63,12 @@
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    padding: 40px;
 }
 
 .link_holder .bottom_section .social_links{
    display: flex;
    gap: 20px;
+
 }
 }

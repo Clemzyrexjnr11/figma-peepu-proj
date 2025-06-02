@@ -1,3 +1,8 @@
+  @tailwind utilities;
+  @tailwind components;
+
+  @layer components{
+  
   .choose_us{
     width: 100vw;
     display: flex;
@@ -62,8 +67,15 @@
   font-size: 18px;
 }
 .choose_us .wrapper a{
-    padding: 12px 50px;
+    padding: 12px 60px;
     border-radius: 4px;
     margin-bottom: 108px;
     border: 1px solid;
+    display: flex;
+    gap: 8px;
 }
+.choose_us .wrapper a::after{
+    content: url('/images/dark-arrow-up.png');
+
+}
+  }

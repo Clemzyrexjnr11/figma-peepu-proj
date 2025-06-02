@@ -4,10 +4,11 @@
 
 @layer components {
   nav {
-    @apply flex justify-between items-center h-20 w-[90vw] rounded-[24px] mt-6 mb-[98px] px-4 shadow-md;
+    @apply flex justify-between w-[90vw] font-pri_font rounded-[24px] items-center h-20 mt-6 mb-[98px] px-4 shadow-md;
   }
-  nav ul li a{
+  nav ul li a, :hover{
         font-size: 16px;
+        cursor: pointer;
         
 }
   .login_btn {

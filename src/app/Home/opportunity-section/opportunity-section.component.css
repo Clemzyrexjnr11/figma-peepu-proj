@@ -1,7 +1,7 @@
 @tailwind utilities;
 @tailwind components;
 
-@layer utilities{
+@layer components{
 
 .Opportunity{
     /* border: 2px solid red; */
@@ -91,13 +91,8 @@
 }
 
  .available_remotejobs .new_jobs{
-    padding: 10px 65px;
-    border-radius: 4px;
-    background: var(--bg-dark-color);
-    color: var(--orange-color);
-    display: flex;
-    align-items: center;
-    margin-bottom: 87px;
+
+    @apply p-[10px_65px] rounded-[4px] bg-bg_dark_color text-orange_color flex items-center mb-[87px]
 }
  .available_remotejobs .new_jobs::after{
     content: url('/images/light-arrow-up.png');
@@ -108,12 +103,7 @@
     padding: 20px;
  }
  .available_remotejobs marquee a{
-    padding: 10px 10px;
-    width: fit-content;
-    margin-right: 30px;
-    color: var(--bg-dark-color);
-    border: 1px solid black;
-    border-radius: 20px;
-    background: linear-gradient( to left, var(--sub-white), #E5E7EB);
+    
+    @apply p-[10px_10px] w-fit mr-[30px] text-bg_dark_color border-[1px] border-black rounded-[20px] bg-gradient-to-l from-sub_white to-[#E5E7EB]
  }
 }

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root{
     --bg-dark-color:#000000;
     --dark-gray:#4A5565;
@@ -26,15 +26,12 @@
 
      --font:Onest;
 
-}
+} */
 
 *{
     box-sizing: border-box;
     text-decoration: none;
 }
 body{
-    height: fit-content;
-    width: 100vw;
-    overflow-x: hidden;
-    font-family: var(--font);
+    @apply h-fit w-[100vw] font-pri_font overflow-x-hidden
 }
