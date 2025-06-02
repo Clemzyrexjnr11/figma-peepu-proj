@@ -1,0 +1,15 @@
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities {
+  .justify_center {
+    @apply flex justify-center;
+  }
+  .align_center {
+    @apply flex items-center;
+  }
+  .just_align_center {
+    @apply flex justify-center items-center;
+  }
+}
+
