@@ -1,0 +1,119 @@
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities{
+
+.Opportunity{
+    /* border: 2px solid red; */
+    height: 1024px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: url('/images/map.png');
+    background-repeat: no-repeat;
+    background-position-y: -200px;
+    background-position-x: 200px;
+    background-size: 800px;
+
+}
+.Opportunity .wrapper{
+    width: 90%;
+    height: 100%;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.Opportunity .wrapper img{
+    height: 37px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.Opportunity .wrapper img:nth-child(1){
+    position: absolute;
+    left: 240px;
+    top: 100px;
+}
+.Opportunity .wrapper img:nth-child(2){
+    position: absolute;
+    left: 440px;
+    top: 20px;
+}
+.Opportunity .wrapper img:nth-child(3){
+    position: absolute;
+    left: 640px;
+    top: 60px;
+}
+.Opportunity .wrapper img:nth-child(4){
+    position: absolute;
+    left: 540px;
+    top: 200px;
+}
+.Opportunity .wrapper img:nth-child(5){
+    position: absolute;
+    left: 800px;
+    top: 250px;
+}
+.Opportunity .available_remotejobs{
+    position: absolute;
+    top: 300px;
+    /* border: 2px solid red; */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.Opportunity .available_remotejobs p:first-child{
+  max-width: 794px;
+  min-height: fit-content;
+  /* border: 2px solid; */
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 145%;
+   margin-bottom: 54px;
+}
+.Opportunity .available_remotejobs span{
+    max-width: 200px;
+    /* border: 2px solid; */
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+.Opportunity .available_remotejobs p{
+    /* border: 2px solid; */
+    font-weight: 400;
+    font-size: 18px;
+    min-height: fit-content;
+    margin-bottom: 50px;
+}
+
+ .available_remotejobs .new_jobs{
+    padding: 10px 65px;
+    border-radius: 4px;
+    background: var(--bg-dark-color);
+    color: var(--orange-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 87px;
+}
+ .available_remotejobs .new_jobs::after{
+    content: url('/images/light-arrow-up.png');
+ }
+ .available_remotejobs marquee{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+ }
+ .available_remotejobs marquee a{
+    padding: 10px 10px;
+    width: fit-content;
+    margin-right: 30px;
+    color: var(--bg-dark-color);
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient( to left, var(--sub-white), #E5E7EB);
+ }
+}

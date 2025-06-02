@@ -1,0 +1,69 @@
+  .choose_us{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .choose_us > .wrapper >  p{
+    width: 600px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    line-height: 32px;
+    margin-bottom: 71px;
+  }
+  .choose_us .wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .choose_us .wrapper h3{
+    font-weight: 600;
+    font-size: 48px;
+    max-width: 794px;
+    margin-bottom: 27px;
+  }
+
+.choose_us_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 10px;
+}
+.choose_us_grid p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+ .choose_us .wrapper .choose_us_grid .grid_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 30px;
+    margin-bottom: 107px;
+}
+.choose_us_grid .grid_box img{
+    height: 60px;
+    width: 60px;
+}
+.choose_us .wrapper .comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 812px;
+    height: 60px;
+    background: var(--sub-lite);
+  margin-bottom: 50px;
+
+}
+.choose_us .wrapper .comment p{
+  font-weight: 400;
+  font-size: 18px;
+}
+.choose_us .wrapper a{
+    padding: 12px 50px;
+    border-radius: 4px;
+    margin-bottom: 108px;
+    border: 1px solid;
+}

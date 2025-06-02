@@ -1,0 +1,33 @@
+<div class="holder h-fit flex gap-6">
+ <div class="top w-[867px] h-fit flex flex-col">
+
+<h2 class="font-[600] text-[40px] leading-[145%]">
+  {{ headerText }}
+</h2>
+<p class="font-[400] text-[18px] leading-[32px] mt-5 mb-10">
+  {{ sub_headerText }}
+</p>
+<ul class="list-none font-[400] text-[18px] gap-[48px] flex flex-col mb-[48px]">
+  @for(item of list; track item.length){
+  <li
+    class="flex text-start items-center gap-[10px] before:content-[url('/images/double-check.png')]"
+  >
+    {{ item }}
+  </li>
+  }
+</ul>
+<p
+  class="w-[558px] h-[84px] p-[10px] rounded-md leading-[30px] mb-[48px] bg-[#F3F2F1]"
+>
+  {{ comment }}
+</p>
+<a
+  href="#"
+  class="p-[15px_10px] border-[1px] border-black rounded-sm w-fit flex items-center justify-center gap-[10px] after:content-[url('/images/dark-arrow-up.png')] {{extrabtnstyle}}"
+  >{{ btnlink_content }}</a
+>
+</div>
+<div class="my-auto">
+<img [src]="imagePath" alt="" class="{{imagestyle}}" />
+</div>
+</div>

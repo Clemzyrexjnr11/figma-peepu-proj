@@ -1,0 +1,49 @@
+<section class="global_company w-[100%] h-fit mb-[70px] flex flex-col">
+  <app-job-btns
+    (employersactive)="onemployerActive()"
+    (jobseekersactive)="onjobseekersActive()"
+  />
+  <div class="wrapper p-[40px] rounded-[40px] w-[90vw] mx-auto bg-[#FAF9F8]">
+    @if(isjobseekers){
+    <app-custom-remote-section
+      [headerText]="
+        'You Want to Work Remotely for a Global Company? You\'re in the Right Place.'
+      "
+      [sub_headerText]="
+        'Everyday, thousands of Nigerians search for jobs online — and end up on not being eligible or on fake platforms with ghost listings. We built this platform to change that.'
+      "
+      [list]="[
+        'Only international remote jobs open to Nigerians',
+        'Filter jobs by role, skill, or experience level',
+        'No Scam — real jobs from real global companies',
+        'Remote job hunting resources, active community, resume tools & interview preps'
+      ]"
+      [comment]="
+        'Whether you\'re into tech, writing, customer service, product design, or admin — the world is hiring'
+      "
+      [btnlink_content]="'Browse Remote Jobs'"
+      [imagePath]="'images/remote-image.png'"
+      [imagestyle]="'h-[500px] w-[500px] object-contain'"
+    />
+    }@else if (isemployers) {
+    <app-custom-remote-section
+      [headerText]="'Build Your Global Team with Nigerian Talent'"
+      [sub_headerText]="
+        'You’ve hired talent before. Now, hire from one of the most driven, skilled, and resilient workforces in the world.We help you reach a pipeline of 50,000+ Nigerian professionals ready to work remotely.'
+      "
+      [list]="[
+        'Access to a fast-growing pool of job-ready African professionals',
+        'Jobs go live in minutes and receive quality applications within hours',
+        'High English proficiency, strong cultural alignment, excellent remote work ethic'
+      ]"
+      [comment]="
+        'Whether you\'re hiring a support agent or a product designer, Africa\'s next best hire is here.'
+      "
+      [btnlink_content]="'Post a Job'"
+      [extrabtnstyle]="'p-[10px_20px] rounded-md'"
+      [imagePath]="'images/remote-image.png'"
+      [imagestyle]="'h-[500px] w-[500px] object-contain'"
+    />
+    }
+  </div>
+</section>

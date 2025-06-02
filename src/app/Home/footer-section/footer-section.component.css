@@ -1,0 +1,75 @@
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities{
+
+.link_holder{
+ width: 90vw;
+ /* border: 2px solid black; */
+ height: fit-content;
+ display: flex;
+ flex-direction: column;
+ /* position: relative; */
+}
+.link_holder .top_section{
+    height: fit-content;
+    /* border: 1px solid red; */
+    width: fit-content;
+    gap: 124px;
+    display: flex;
+    align-self: center;
+}
+.link_holder .top_section ul{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.link_holder .top_section ul span{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.link_holder .peepu_logo{
+    height: fit-content;
+    width: fit-content;
+    /* border: 1px solid; */
+    padding-bottom: 40px;
+
+}
+.peepu_logo img{
+    height: 150px;
+    width: 550px;
+    object-fit: contain;
+}
+.link_holder .mid_section{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px 40px 0px;
+    border-top: 1px solid rgb(207, 204, 204);
+    border-bottom: 1px solid rgb(207, 204, 204);
+}
+.link_holder .mid_section p{
+    color: var(--lite-gray);
+    text-align: center;
+    font-size: 13px;
+}
+.link_holder .mid_section a:hover{
+    @apply text-orange_color
+}
+.link_holder .bottom_section{
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.link_holder .bottom_section .social_links{
+   display: flex;
+   gap: 20px;
+}
+}

@@ -1,0 +1,31 @@
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+ .getStarted{
+
+     @apply w-[90vw] m-auto flex justify-center mb-[174px] h-[500px] rounded-[24px] p-[30px] bg-gradient-to-br from-[#201E1C] from-90% to-[#E79605] to-10%
+}
+.getStarted_wrapper{
+  
+  @apply w-[100%] p-[18px] border-[1px] border-white flex flex-col items-center
+}
+
+.getStarted_wrapper > p{
+    @apply font-[600] text-[24px] text-lite
+}
+
+.getStarted_wrapper > span{
+
+    @apply font-[600] text-[48px] text-lite
+}
+
+.getStarted_wrapper .journey_card_holder{
+
+    @apply flex h-fit mt-[73px] gap-[27px]
+}
+}
+
+
+

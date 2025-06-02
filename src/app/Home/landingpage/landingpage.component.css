@@ -1,0 +1,35 @@
+
+
+
+
+/* END OF TOP HERO SECTION */
+
+
+
+/* END OF GLOBAL COMPANY SECTION */
+
+
+ /* .available_remotejobs marquee a::before{
+    content: url('/images/dollar.png');
+
+ } */
+
+ /* END OF SECTION */
+
+
+/* END OF CHOOSE US SECTION */
+
+
+
+/* END OF TESTIMONIAL SECTION */
+
+
+/* END OF GET STARTED SECTION */
+
+footer{
+    width: 100vw;
+    /* border: 2px solid; */
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}

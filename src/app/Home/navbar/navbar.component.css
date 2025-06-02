@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  nav {
+    @apply flex justify-between items-center h-20 w-[90vw] rounded-[24px] mt-6 mb-[98px] px-4 shadow-md;
+  }
+  nav ul li a{
+        font-size: 16px;
+        
+}
+  .login_btn {
+    @apply text-white bg-black py-[10px] px-[20px] rounded-md;
+  }
+}
+/* @layer components{
+   
+} */

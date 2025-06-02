@@ -1,0 +1,22 @@
+@tailwind utilities;
+
+@layer utilities {
+  .flex_column {
+    @apply flex flex-col;
+  }
+  .custom_hero_anchortag {
+    width: fit-content;
+    padding: 15px 55px;
+    background: var(--bg-dark-color);
+    color: var(--orange-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    gap: 5px;
+  }
+  .custom_hero_anchortag:last-child {
+    background-color: var(--lite);
+    color: black;
+  }
+}

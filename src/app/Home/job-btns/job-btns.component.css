@@ -1,0 +1,28 @@
+@tailwind utilities;
+@tailwind components;
+@layer utilities {
+  .justify_center {
+    @apply flex justify-center;
+  }
+  .align_center {
+    @apply flex items-center;
+  }
+  .just_align_center {
+    @apply flex justify-center items-center;
+  }
+}
+@layer components {
+  .jobBtns {
+    @apply w-[400px] h-[84px] align_center gap-[16px] p-[12px] rounded-[32px] ml-[5vw] mb-[45px] bg-jobBtns_bg;
+  }
+  .jobBtns button {
+    @apply text-bg_dark_color font-[400] align_center gap-[10px];
+  }
+  .jobBtns button::before {
+    @apply w-[30px] aspect-square rounded-[50%] bg-job_icon just_align_center;
+  }
+  .active {
+    @apply bg-lite p-[12px_24px] rounded-[30px];
+  }
+
+}
