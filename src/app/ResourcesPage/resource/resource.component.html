@@ -1,104 +1,39 @@
 <header class="w-[100vw] h-fit justify_center">
-  <app-navbar [optnavstyle]="'font-pri_font'" />
+  <app-navbar [style]="{navbar:'font-pri_font', login_btn:'bg-orange_color text-black'}" />
 </header>
 <main>
-  <app-resource-hero />
+  <app-hero-section
+    [styles]="{
+    hero_container:'h-[80vh] w-[85vw] my-[50px] flex mx-auto', 
+    left_div:'w-[65%] h-[100%] flex flex-col gap-[30px]',
+    hero_title:' font-[600] text-[64px] max-xl:text-[40px]',
+    hero_ul:'grid grid-cols-2 gap-6',
+    hero_li:`flex items-center gap-4  before:content-[url('/images/failed_btn.png')]`,
+    right_div:'w-[35%]',
+   }"
+    [hero_title]="'Everything You Need to Land a Remote Job-In One Place '"
+    [content]="{ type: 'list', items: hero_list_content }"
+    [hero_image]="'images/resource_img.png'"
+  />
   <app-remote-career />
-  <app-togglebtn />
+  <div
+    class="w-fit p-3 mb-[88px] bg-jobBtns_bg rounded-[34px] ml-[5vw] flex gap-6"
+  >
+    <button class="active">Blog Posts</button>
+    <button class="">Resources</button>
+  </div>
 
   <div
     class="p-3 mb-[70px] w-[70vw] mx-auto h-fit grid grid-cols-3 gap-6 max-xl:w-[90vw] max-lg:grid-cols-2 max-lg:w-[70vw] max-md:w-[90vw] max-sm:grid-cols-1 max-sm:w-[70vw]"
   >
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Premium Remote Job Application Kit'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'View Resources'"
-      [optmaintextstyle]="'text-orange_color text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'How to Get a Remote Job Without Experience'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'View Resources'"
-      [optmaintextstyle]="'text-orange_color text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'AI Prompts + Email Templates for Job...'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'View Resources'"
-      [optmaintextstyle]="'text-orange_color text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'The Ultimate LinkedIn Optimization Guide'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Online Portfolio + Website Creation Guide'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Interview Prep Masterclass'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Full Remote Job Hunting Program'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Remote Work Basic Skills Program'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Remote Work Advanced Skills Program'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
-    <app-card
-      [optcardstyle]="
-        'h-[350px] w-auto rounded-none bg-transparent shadow-md flex flex-col gap-[20px]'
-      "
-      [headerText]="'Remote Work Tech Stack Program'"
-      [optheaderstyle]="'text-[17px] translate-y-[220px] max-xl:text-[14px]'"
-      [mainText]="'COMING SOON'"
-      [optmaintextstyle]="'text-lite_gray text-[14px] translate-y-[220px]'"
-    />
+    @for(item of card_content; track item.length){
+    <div
+      class="h-[300px] w-[300px] p-4 flex flex-col justify-end gap-4 shadow-md background_image bg-[url('/images/comp_logo.png')]"
+    >
+      <span class="font-[600]">{{ item.maintext }}</span>
+      <p class="text-lite_gray {{ item.color }}">{{ item.subtext }}</p>
+    </div>
+    }
   </div>
 </main>
 <footer class="h-fit w-full p-6 align_center justify-between">

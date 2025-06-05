@@ -6,29 +6,15 @@
       stronger team — with Nigerian excellence
     </p>
      <div class="choose_us_grid">
-     <app-card 
-     [imgPath]="'images/nike-check.png'"
-      [optimgpathstyle]="'mx-auto w-[70px]'" 
-      [optcardstyle]="'p-[5px] mb-[30px] w-auto bg-transparent'" 
-      [mainText]="'Access to a fast-growing pool of job-ready African professionals'" 
-      [optmaintextstyle]="'max-w-full text-center order-2'" 
-      [optionalbtmdiv]="'flex-col items-center'"/>
-     <app-card 
-     [imgPath]="'images/nike-check.png'"
-      [optimgpathstyle]="'mx-auto w-[70px]'" 
-      [optcardstyle]="'p-[5px] mb-[30px] w-auto bg-transparent'" 
-      [mainText]="'Jobs go live in minutes and receive quality applications within hours'" 
-      [optmaintextstyle]="' max-w-full text-center order-2'" 
-      [optionalbtmdiv]="'flex-col items-center'"/>
-     <app-card 
-     [imgPath]="'images/nike-check.png'"
-      [optimgpathstyle]="'mx-auto w-[70px]'" 
-      [optcardstyle]="'p-[5px] mb-[30px] w-auto bg-transparent'" 
-      [mainText]="'High English proficiency, strong cultural alignment, excellent remote work ethic'" 
-      [optmaintextstyle]="'max-w-full text-center order-2'" 
-      [optionalbtmdiv]="'flex-col items-center'"/>
+      @for (item of grid_content; track item.content){
+        <div class="grid_box">
+        <img [src]="item.img" alt="">
+        <p>{{item.content}}</p>
+        </div>
+      }
+
       </div>
-    <div class="comment">
+    <div class="comment bg-sub_lite">
       <p>Whether you're hiring a support agent or a product designer, Africa's next best hire is here.</p>
     </div>
     <a href="#" >Post a job</a>

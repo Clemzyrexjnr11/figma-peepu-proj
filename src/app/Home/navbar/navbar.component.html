@@ -1,4 +1,4 @@
-<nav class=" {{optnavstyle}}">
+<nav class=" w-[90vw] {{style.navbar}}">
   <span>
     <img src="images/comp_logo.png" alt="" class="h-[50px]" />
   </span>
@@ -6,11 +6,8 @@
     <li><a [routerLink]="''">Home</a></li>
     <li><a href="#">Browse Jobs</a></li>
     <li><a href="#">Post Jobs</a></li>
-    <li (click)="onNavigateResource()"><a>Resources</a></li>
+    <li><a [routerLink]="['../resources']">Resources</a></li>
     <li><a href="#">Community</a></li>
-    <li><a href="#" class="login_btn">Login</a></li>
-    <!-- <a href="">
-       <app-custom-button [text]="'login'" [btnstyles]="'text-white bg-black py-[10px] px-[20px] rounded-md'"/>
-       </a> -->
+    <li><a href="#" class="login_btn {{style.login_btn}}">Login</a></li>
   </ul>
 </nav>

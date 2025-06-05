@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { footerLinks } from '../Footer_Links/links';
 @Component({
   selector: 'app-footer-section',
   imports: [],
@@ -7,6 +6,17 @@ import { footerLinks } from '../Footer_Links/links';
   styleUrl: './footer-section.component.css'
 })
 export class FooterSectionComponent {
-  public footerLinks = footerLinks;
+
+   public footerLinks = [
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria | ',
+     'Remote tech Jobs in Nigeria  ',
+]
 
 }

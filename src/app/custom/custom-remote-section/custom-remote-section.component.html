@@ -10,7 +10,7 @@
 <ul class="list-none font-[400] text-[18px] gap-[48px] flex flex-col mb-[48px]">
   @for(item of list; track item.length){
   <li
-    class="flex text-start items-center gap-[10px] before:content-[url('/images/double-check.png')]"
+    class="align_center text-start gap-[10px] before:content-[url('/images/double-check.png')]"
   >
     {{ item }}
   </li>
@@ -23,11 +23,11 @@
 </p>
 <a
   href="#"
-  class="p-[15px_10px] border-[1px] border-black rounded-sm w-fit flex items-center justify-center gap-[10px] after:content-[url('/images/dark-arrow-up.png')] {{extrabtnstyle}}"
+  class="p-[15px_10px] border-[1px] border-black rounded-sm w-fit just_align_center gap-[10px] after:content-[url('/images/dark-arrow-up.png')] {{styles.button}}"
   >{{ btnlink_content }}</a
 >
 </div>
 <div class="my-auto">
-<img [src]="imagePath" alt="" class="{{imagestyle}}" />
+<img [src]="imagePath" alt="" class="h-[500px] w-[500px] object-contain {{styles.imagestyle}}" />
 </div>
 </div>

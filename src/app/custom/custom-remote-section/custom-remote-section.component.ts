@@ -12,6 +12,7 @@ export class CustomRemoteSectionComponent {
   @Input() comment!: string;
   @Input() btnlink_content!: string;
   @Input() imagePath!: string;
-  @Input() imagestyle?:string;
-  @Input() extrabtnstyle?:string;
+  @Input() styles:any = {};
+  // @Input() imagestyle?:string;
+  // @Input() extrabtnstyle?:string;
 }

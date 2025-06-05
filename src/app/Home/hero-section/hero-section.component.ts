@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './hero-section.component.css'
 })
 export class HeroSectionComponent {
-
+  @Input() hero_title!:string;
+  @Input() hero_image!:string;
+  @Input() content:any = {};
+  @Input() buttons:any = [];
+  @Input() styles:any = {}
 }

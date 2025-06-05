@@ -1,6 +1,38 @@
 <header class="h-fit w-[100vw] flex flex-col items-center">
   <app-navbar />
-  <app-hero-section />
+  <app-hero-section
+    [hero_title]="
+      'The #1 Job Board for Nigerians seeking International Remote Jobs'
+    "
+    [styles]="{
+      hero_container: 'flex gap-[50px] h-fit w-[90vw] mx-auto',
+      left_div: 'flex_column mb-[72px] h-fit w-[85%] py-[10px]',
+      hero_title: 'text-[58px] font-[600]',
+      paragraph: 'text-[25px] mt-[19px] mb-[50px] leading-[42px]',
+      hero_btn_div: 'flex w-fit h-fit gap-[23px]',
+      right_div: 'h-fit w-[15%]',
+      hero_image: 'h-[229px]'
+    }"
+    [content]="{
+      type: 'paragraph',
+      text: 'We\'re the platform where Nigerian professionals discover real remote jobs they\'re eligible for. And where global employers hire from a growing pipeline of world-class African talent.'
+    }"
+    [hero_image]="'images/top-hero-bg.png'"
+  >
+    <app-button
+      [btn_content]="'Browse Jobs'"
+      [btn_type]="'button'"
+      [styles]="`bg-bg_dark_color text-orange_color`"
+    />
+    <app-button
+      [btn_content]="'Post a Job'"
+      [btn_type]="'button'"
+      [styles]="` bg-transparent border-[1px] border-black  after:content-[url('/images/dark-arrow-up.png')] `"
+    />
+  </app-hero-section>
+  <div class="mb-[30px] w-[90vw] mx-auto">
+    <img src="images/top-hero.png" alt="" class="w-full" />
+  </div>
 </header>
 <main>
   <app-global-company />

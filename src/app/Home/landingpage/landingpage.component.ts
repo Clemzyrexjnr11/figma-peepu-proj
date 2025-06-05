@@ -7,10 +7,11 @@ import { ChooseSectionComponent } from "../choose-section/choose-section.compone
 import { TestimonialsSectionComponent } from "../testimonials-section/testimonials-section.component";
 import { GetStartedSectionComponent } from "../get-started-section/get-started-section.component";
 import { FooterSectionComponent } from "../footer-section/footer-section.component";
+import { ButtonComponent } from "../../custom/button/button.component";
 
 @Component({
   selector: 'app-landingpage',
-  imports: [NavbarComponent, HeroSectionComponent, GlobalCompanyComponent, OpportunitySectionComponent, ChooseSectionComponent, TestimonialsSectionComponent, GetStartedSectionComponent, FooterSectionComponent],
+  imports: [NavbarComponent, HeroSectionComponent, GlobalCompanyComponent, OpportunitySectionComponent, ChooseSectionComponent, TestimonialsSectionComponent, GetStartedSectionComponent, FooterSectionComponent, ButtonComponent],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.css'
 })

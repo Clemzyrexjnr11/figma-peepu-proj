@@ -1,32 +1,22 @@
-<div class="flex_column w-[90vw]">
-  <div class="flex gap-[50px]">
-    <div class=" flex_column mb-[72px] h-fit w-[85%] py-[10px]">
-      <h1 class="text-[58px] font-[600]">
-        The #1 Job Board for Nigerians seeking International Remote Jobs
-      </h1>
-      <p class="text-[25px] mt-[19px] mb-[50px] leading-[42px]">
-        We're the platform where Nigerian professionals discover real remote
-        jobs they're eligible for. And where global employers hire from a
-        growing pipeline of world-class African talent.
-      </p>
-      <div class=" flex w-fit h-fit gap-[23px]">
-        <a href="#" class="custom_hero_anchortag">Browse Jobs</a>
-        <a
-          href="#"
-          class=" custom_hero_anchortag after:content-[url('/images/dark-arrow-up.png')] border-[1px] border-black"
-          >Post A Job</a
-        >
-      </div>
-    </div>
-    <div class="h-fit w-[15%]">
-      <img src="images/top-hero-bg.png" alt="" class="h-[229px]" />
+<div class="{{ styles.hero_container }}">
+  <div class="{{ styles.left_div }}">
+    <h1 class="{{ styles.hero_title }}">
+      {{ hero_title }}
+    </h1>
+    @if(content?.type === 'paragraph'){
+    <p class="{{ styles.paragraph }}">{{ content.text }}</p>
+    }@else if(content?.type === 'list'){
+    <ul class="{{ styles.hero_ul }}">
+      @for(item of content.items; track item.length){
+      <li class="{{ styles.hero_li }}">{{ item }}</li>
+      }
+    </ul>
+    }
+    <div class="{{ styles.hero_btn_div }}">
+      <ng-content select=""></ng-content>
     </div>
   </div>
-  <div class="h-fit mb-[73px]">
-    <img
-      src="images/top-hero.png"
-      alt="hero_img"
-      class="w-[100%] object-fill"
-    />
+  <div class="{{ styles.right_div }}">
+    <img src="{{ hero_image }}" alt="" class="{{ styles.hero_image }}" />
   </div>
 </div>

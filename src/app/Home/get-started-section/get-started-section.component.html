@@ -3,21 +3,17 @@
     <p>Ready to get started</p>
     <span>Choose your journey</span>
     <div class="journey_card_holder">
-      <app-card
-        [headerText]="'I\'m a Job Seeker'"
-        [mainText]="
-          'Find remote jobs with real pay, real employers, and zero relocation required'
-        "
-        [imgPath]="'images/dark-arrow-right.png'"
-        
-      />
-      <app-card
-        [headerText]="'I\'m an Employer'"
-        [mainText]="
-          'Post a role and hire from a growing pipeline of Nigeria\'s top professionals.'
-        "
-        [imgPath]="'images/dark-arrow-right.png'"
-      />
+      @for(item of card_content; track item.length){
+      <div
+        class="journey_card bg-[#E79605] h-[222px] w-[503px] p-[24px_40px] rounded-[18px] flex flex-col gap-[15px]"
+      >
+        <span class="font-[600] text-[36px]">{{item.header}}</span>
+        <div class="flex gap-6">
+          <p class="max-w-[330px]">{{item.sub_text}}</p>
+          <img src="images/dark-arrow-right.png"alt="" class="" />
+        </div>
+      </div>
+    }
     </div>
   </div>
 </section>

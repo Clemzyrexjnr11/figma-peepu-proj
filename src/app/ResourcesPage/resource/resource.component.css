@@ -16,8 +16,15 @@
   }
 }
 @layer components{
-::ng-deep app-card{
-    @apply background_image bg-[url('/images/comp_logo.png')];
+::ng-deep app-hero-section :nth-child(2) :last-child::before{
+  content: url('/images/success_btn.png');
+}
+ .active{
+    color: white;
+    background: black;
+    padding: 8px;
+    border-radius: 14px;
+}
 }
 
-}
+

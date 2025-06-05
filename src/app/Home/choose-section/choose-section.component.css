@@ -58,8 +58,8 @@
     align-items: center;
     width: 812px;
     height: 60px;
-    background: var(--sub-lite);
-  margin-bottom: 50px;
+    /* background: var(--sub-lite); */
+    margin-bottom: 50px;
 
 }
 .choose_us .wrapper .comment p{

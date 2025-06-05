@@ -8,9 +8,6 @@ import { RouterLink, Router } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  private router = inject(Router)
-   onNavigateResource(){
-   this.router.navigate(['resources'], {replaceUrl:true})
-   }
-   @Input() optnavstyle?:string;
+
+   @Input() style:any = {};
 }

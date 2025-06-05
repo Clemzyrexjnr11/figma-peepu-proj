@@ -20,8 +20,7 @@
     display: flex;
     gap: 30px;
 }
-
-::ng-deep app-testimonial-card{
+.testimonial_card{
     width: 374px;
     border-radius: 6px;
     height: fit-content;
@@ -30,4 +29,23 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+.testimonial_card .client_comment p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 25px;
+    
+}
+.testimonial_card .client_info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.testimonial_card .client_info .cl_occupation{
+   color: var(--dark-gray);
 }
