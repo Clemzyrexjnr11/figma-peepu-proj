@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LandingpageComponent } from './Home/landingpage/landingpage.component';
 import { ResourceComponent } from './ResourcesPage/resource/resource.component';
+import { CommunityComponent } from './CommunityPage/community/community.component';
 export const routes: Routes = [
     {
         path:'',
@@ -16,6 +17,11 @@ export const routes: Routes = [
         path:'resources',
         component:ResourceComponent,
         title:'peepuu.com/resources'
-    }
+    },
+    {
+        path:'community',
+        component:CommunityComponent,
+        title:'peepuu.com/community'
+    },
 
 ];

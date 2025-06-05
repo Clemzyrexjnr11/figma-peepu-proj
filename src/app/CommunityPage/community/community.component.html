@@ -1,0 +1,143 @@
+<header class="w-[100vw] h-fit justify_center">
+  <app-navbar
+    [style]="{
+      navbar: 'font-pri_font',
+      login_btn: 'bg-orange_color text-black'
+    }"
+  />
+</header>
+<main>
+  <app-hero-section
+    [styles]="{
+    hero_container:'h-[80vh] w-[80vw] my-[50px] flex mx-auto ', 
+    left_div:'w-[65%] h-[100%] flex flex-col gap-[30px]',
+    hero_title:' font-[600] text-[64px] max-xl:text-[40px]',
+    paragraph: 'text-[24px] mt-[19px] mb-[50px] leading-[42px]',
+    right_div:'w-[35%]',
+   }"
+    [hero_title]="`Stop Guessing. Start Getting Hired.`"
+    [content]="{
+      type: 'paragraph',
+      text: 'A paid membership + coaching experience to help you land a verified remote job — faster, smarter, and with full support.'
+    }"
+    [hero_image]="'images/comm_hero_img.png'"
+  >
+    <app-button
+      [btn_content]="'Join the community'"
+      [btn_type]="'button'"
+      [styles]="` bg-orange_color  after:content-[url('/images/dark-arrow-up.png')] `"
+    />
+  </app-hero-section>
+
+  <section
+    class="peepu_comm flex flex-col bg-jobBtns_bg h-fit py-[60px] w-[100vw]"
+  >
+    <div
+      class="w-[70%] flex gap-[20px] mx-auto h-[60vh] mb-[100px]"
+    >
+      <div class="h-[100%]">
+        <img src="images/comm_img1.png" alt="" class="h-[100%]" />
+      </div>
+      <div class="flex flex-col w-[60%] gap-4">
+        <h2 class="font-[600] text-[30px]">
+          The Peepuu Community is your monthly support system
+        </h2>
+        <p class="text-lite_gray text-[20px]">
+          A paid membership that combines expert coaching, live guidance,
+          accountability, and real feedback to help you go from stuck to hired.
+        </p>
+        <span class="font-[600] text-[25px] italic max-w-[70%]"
+          >You don't have to do this alone. And you shouldn't.</span
+        >
+      </div>
+    </div>
+
+    <div
+      class="w-[90vw] mx-auto h-fit gap-4 grid grid-cols-3 mb-[100px]"
+    >
+      @for(item of comm_card_content; track item.length){
+      <div
+        class="grid_box h-[250px] w-[350px] flex flex-col p-4 gap-4 rounded-lg shadow-md"
+      >
+        <img [src]="item.imgPath" alt="" class="w-[50px]" />
+        <span class="text-[20px] font-[600]">{{ item.header }}</span>
+        <p class="text-lite_gray">{{ item.subtext }}</p>
+      </div>
+
+      }
+    </div>
+
+    <div class="w-[80vw] h-[80vh] mx-auto flex gap-6">
+      <div
+        class="h-[100%] w-[50%] bg-[#FBBF56] rounded-[0px_0px_0px_70px] p-[30px] flex flex-col gap-4"
+      >
+        <span class="font-[600] text-[30px]"> This is for you if</span>
+        <ul class="flex flex-col gap-6">
+          <li class="testimonial_list">
+            You're tired of applying and hearing nothing back
+          </li>
+          <li class="testimonial_list">
+            You're done wasting time on free PDFs that don't deliver
+          </li>
+          <li class="testimonial_list">
+            You're ready to follow a proven system—and finally see results
+          </li>
+        </ul>
+      </div>
+      <div
+        class="h-[100%] p-[30px] w-[50%] bg-white rounded-[0px_70px_0px_0px] flex flex-col gap-4"
+      >
+        <span class="font-[600] text-[30px] mb-[20px]"
+          >What Our Members Say</span
+        >
+        <div class="flex flex-col">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="images/profile_icon.png" alt="" class="w-[50px]" />
+            <p>Ozioma A.</p>
+          </div>
+          <p class="mb-[20px]">
+            "I'd been applying for 6 months with nothing. One month in the
+            community, I got two interviews and more clarity than ever."
+          </p>
+          <hr />
+        </div>
+        <div class="flex flex-col mt-5">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="images/profile_icon.png" alt="" class="w-[50px]" />
+            <p>Tomisin O.</p>
+          </div>
+          <p class="mb-[20px]">
+            "It feels like I finally have a system that's made for Nigerians
+            like me. This is different."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="flex items-center justify-center h-[70vh] w-[100vw] bg-[url('/images/join_comm_img.png')] bg-center"
+  > 
+  <div class="w-[70%] h-[80%] gap-4 flex flex-col items-center justify-center">
+    <span class="font-[600] text-[38px] text-white text-center"
+      >Join Now — because every month you delay is a missed chance to earn in
+      dollars.</span
+    >
+    <p class="text-white">
+      Your global career doesn't start with luck. It starts with a clear path
+      <span class="text-orange_color">— and we've built it for you</span>
+    </p>
+    <a href="" class="p-[10px_60px] text-white bg-black rounded-md">Join the community</a>
+    </div>
+  </section>
+</main>
+
+<footer class="h-fit w-full p-6 flex items-center justify-between">
+  <div class="h-fit w-fit flex gap-4 text-lite_gray">
+    <a href="">Resources</a>
+    <a href="">Need Help?</a>
+  </div>
+  <div class="h-fit w-fit flex gap-4 text-lite_gray">
+    <p>© 2025, All Rights Reserved | Peepuu</p>
+  </div>
+</footer>
