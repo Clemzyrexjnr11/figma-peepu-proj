@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../Home/navbar/navbar.component';
-import { RemoteCareerComponent } from "../remote-career/remote-career.component";
 import { HeroSectionComponent } from '../../Home/hero-section/hero-section.component';
 
 @Component({
   selector: 'app-resource',
-  imports: [NavbarComponent, RemoteCareerComponent, HeroSectionComponent],
+  imports: [NavbarComponent,HeroSectionComponent],
   templateUrl: './resource.component.html',
   styleUrl: './resource.component.css'
 })
