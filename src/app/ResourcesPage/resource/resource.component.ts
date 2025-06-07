@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../Home/navbar/navbar.component';
 import { HeroSectionComponent } from '../../Home/hero-section/hero-section.component';
-
 @Component({
   selector: 'app-resource',
   imports: [NavbarComponent,HeroSectionComponent],

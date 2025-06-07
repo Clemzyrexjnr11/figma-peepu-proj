@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LandingpageComponent } from './Home/landingpage/landingpage.component';
 import { ResourceComponent } from './ResourcesPage/resource/resource.component';
 import { CommunityComponent } from './CommunityPage/community/community.component';
+import { BrowseJobsComponent } from './BrowseJobsPage/browse-jobs/browse-jobs.component';
 export const routes: Routes = [
     {
         path:'',
@@ -22,6 +23,15 @@ export const routes: Routes = [
         path:'community',
         component:CommunityComponent,
         title:'peepuu.com/community'
+    },
+    {
+        path:'browse-jobs',
+        component:BrowseJobsComponent,
+        title:'peepuu.com/browse-jobs'
+    },
+    {
+        path:'**',
+        redirectTo:'Homepage',
     },
 
 ];

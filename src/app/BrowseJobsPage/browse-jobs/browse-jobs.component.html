@@ -1,0 +1,56 @@
+<header class="w-[100vw] h-fit flex justify-center">
+  <app-navbar
+    [style]="{
+      navbar: 'font-pri_font',
+      login_btn: 'bg-orange_color text-black'
+    }"
+  />
+</header>
+
+<main>
+  <div
+    class="h-fit w-[80vw] rounded-lg flex flex-col mx-auto py-[40px] px-6 shadow-lg"
+  >
+    <span class="font-[600] text-[25px] mb-2">Browse Jobs</span>
+    <p class="text-[14px] mb-4">Explore our archives of remote job postings</p>
+    <div class="flex gap-4 h-fit">
+      <input
+        type="text"
+        class="w-[80%] h-[38px] border-[1px] outline-none px-6 rounded-md"
+        placeholder="Job title or keyword"
+      />
+      <app-button
+        [btn_content]="'search'"
+        [styles]="`bg-orange_color h-[38px] after:content-[url('/images/dark-arrow-up.png')] flex items-center`"
+      />
+    </div>
+
+    <div class="flex flex-col gap-4 mt-6">
+      <p class="font-bold text-[24px]">{{ BrowseJobs.length }} Job(s)</p>
+      <ul class="flex flex-col gap-[30px]">
+        @for(item of paginatedData; track item.id){
+        <div class="flex items-center gap-6">
+          <img src="images/job_icon.png" alt="" />
+          <div class="flex flex-col gap-2">
+            <p>{{ item.jobtitle }}</p>
+            <div class="flex gap-6">
+              <li class="text-[13px] text-lite_gray">{{ item.jobtype }}</li>
+              <li class="text-[13px] text-lite_gray">
+                {{ item.workingduration }}
+              </li>
+            </div>
+          </div>
+        </div>
+        }
+      </ul>
+
+      <mat-paginator
+        [length]="BrowseJobs.length"
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 15, 20, 50, 100]"
+        aria-label="Select page"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</main>

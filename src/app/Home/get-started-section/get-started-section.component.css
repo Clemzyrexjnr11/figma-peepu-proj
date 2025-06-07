@@ -23,7 +23,7 @@
 
 .getStarted_wrapper .journey_card_holder{
 
-    @apply flex h-fit mt-[73px] gap-[27px]
+    @apply flex h-fit mt-[73px] gap-[27px] w-[100%]
 }
 }
 
