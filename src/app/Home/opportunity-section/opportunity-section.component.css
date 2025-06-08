@@ -107,3 +107,35 @@
     @apply p-[10px_10px] w-fit mr-[30px] text-bg_dark_color border-[1px] border-black rounded-[20px] bg-gradient-to-l from-sub_white to-[#E5E7EB]
  }
 }
+@media(max-width:1040px){
+    .Opportunity .wrapper img{
+        display: none;
+    }
+    .Opportunity{
+    background:none;
+    height: 800px;
+
+
+    }
+
+    .Opportunity .available_remotejobs{
+        top:20px;
+    }
+}
+@media(max-width:500px){
+.Opportunity .available_remotejobs p:first-child{
+    font-size: 30px;
+}
+.Opportunity .available_remotejobs span{
+    font-size: 30px;
+}
+}
+@media(max-width:415px){
+    .Opportunity .new_jobs::after{
+        content: '';
+    }
+    .Opportunity .new_jobs{
+        font-size: 12px;
+        padding: 10px 45px;
+    }
+}

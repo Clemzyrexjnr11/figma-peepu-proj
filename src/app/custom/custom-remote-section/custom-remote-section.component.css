@@ -10,4 +10,8 @@
   .just_align_center {
     @apply flex justify-center items-center;
   }
+  .remote-list{
+    @apply align_center text-start gap-[10px]
+  }
+
 }

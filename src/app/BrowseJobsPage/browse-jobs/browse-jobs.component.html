@@ -9,19 +9,19 @@
 
 <main>
   <div
-    class="h-fit w-[80vw] rounded-lg flex flex-col mx-auto py-[40px] px-6 shadow-lg"
-  >
-    <span class="font-[600] text-[25px] mb-2">Browse Jobs</span>
-    <p class="text-[14px] mb-4">Explore our archives of remote job postings</p>
-    <div class="flex gap-4 h-fit">
+    class="h-fit w-[80vw] rounded-lg flex flex-col mx-auto py-[40px] px-6 shadow-lg
+  max-lg:w-[95vw]">
+    <span class="font-[600] text-[25px] mb-2 max-[370px]:text-[20px]">Browse Jobs</span>
+    <p class="text-[14px] mb-4 max-[370px]:text-[11px]">Explore our archives of remote job postings</p>
+    <div class="flex gap-4 h-fit max-md:flex-col max-md:items-end max-[430px]:items-start">
       <input
         type="text"
-        class="w-[80%] h-[38px] border-[1px] outline-none px-6 rounded-md"
+        class="w-[80%] h-[38px] border-[1px] outline-none px-6 rounded-md max-md:w-[100%]"
         placeholder="Job title or keyword"
       />
       <app-button
         [btn_content]="'search'"
-        [styles]="`bg-orange_color h-[38px] after:content-[url('/images/dark-arrow-up.png')] flex items-center`"
+        [styles]="`bg-orange_color h-[38px] after:content-[url('/images/dark-arrow-up.png')] flex items-center max-[430px]:px-[40px]`"
       />
     </div>
 
@@ -32,10 +32,10 @@
         <div class="flex items-center gap-6">
           <img src="images/job_icon.png" alt="" />
           <div class="flex flex-col gap-2">
-            <p>{{ item.jobtitle }}</p>
+            <p class="max-md:text-[13px] max-sm:text-[11px]">{{ item.jobtitle }}</p>
             <div class="flex gap-6">
-              <li class="text-[13px] text-lite_gray">{{ item.jobtype }}</li>
-              <li class="text-[13px] text-lite_gray">
+              <li class="text-[13px] text-lite_gray max-sm:text-[10px]">{{ item.jobtype }}</li>
+              <li class="text-[13px] text-lite_gray max-sm:text-[10px]">
                 {{ item.workingduration }}
               </li>
             </div>

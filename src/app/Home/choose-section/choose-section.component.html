@@ -1,11 +1,11 @@
-<section class="choose_us">
+<section class="choose_us ">
     <div class="wrapper">
-    <h3>why global companies choose us</h3>
+    <h3 class="text-center">why global companies choose us</h3>
     <p>
       Don't miss out on Africa's most untapped hiring advantage. Build a
       stronger team — with Nigerian excellence
     </p>
-     <div class="choose_us_grid">
+     <div class="choose_us_grid max-xl:flex max-xl:flex-col">
       @for (item of grid_content; track item.content){
         <div class="grid_box">
         <img [src]="item.img" alt="">
@@ -14,7 +14,7 @@
       }
 
       </div>
-    <div class="comment bg-sub_lite">
+    <div class="comment bg-sub_lite text-center">
       <p>Whether you're hiring a support agent or a product designer, Africa's next best hire is here.</p>
     </div>
     <a href="#" >Post a job</a>

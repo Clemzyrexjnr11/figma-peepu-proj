@@ -49,3 +49,24 @@
 .testimonial_card .client_info .cl_occupation{
    color: var(--dark-gray);
 }
+@media(max-width:430px){
+    .testimonials_wrapper h4{
+        font-size: 25px;
+    }
+    .testimonial_card{
+        width: 100%;
+    }
+.testimonial_card .client_comment p{
+    font-weight: 300;
+    font-size: 14px;
+}
+.testimonial_card .client_info{
+    font-size: 14px;
+}
+}
+@media(max-width:360px){
+    .testimonials_wrapper h4{
+        font-size: 18px;
+        text-align: center;
+    }
+}

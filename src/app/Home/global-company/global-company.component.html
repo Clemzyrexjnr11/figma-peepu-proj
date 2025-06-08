@@ -3,7 +3,7 @@
     (employersactive)="onemployerActive()"
     (jobseekersactive)="onjobseekersActive()"
   />
-  <div class="wrapper p-[40px] rounded-[40px] w-[90vw] mx-auto bg-[#FAF9F8]">
+  <div class="wrapper p-[40px] rounded-[40px] w-[90vw] mx-auto bg-[#FAF9F8] max-[580px]:p-[10px]">
     @if(isjobseekers){
     <app-custom-remote-section
       [headerText]="jobseekers_content.header"

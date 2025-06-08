@@ -5,7 +5,7 @@
 @layer components{
  .getStarted{
 
-     @apply w-[90vw] m-auto flex justify-center mb-[174px] h-[500px] rounded-[24px] p-[30px] bg-gradient-to-br from-[#201E1C] from-90% to-[#E79605] to-10%
+     @apply w-[90vw] m-auto flex justify-center items-center mb-[174px] h-fit rounded-[24px] p-[30px] bg-gradient-to-br from-[#201E1C] from-90% to-[#E79605] to-10%
 }
 .getStarted_wrapper{
   
@@ -23,8 +23,45 @@
 
 .getStarted_wrapper .journey_card_holder{
 
-    @apply flex h-fit mt-[73px] gap-[27px] w-[100%]
+    @apply flex h-fit mt-[73px] gap-[27px] w-[100%] justify-center items-center
 }
+}
+@media(max-width:688px){
+.getStarted_wrapper > span{
+    font-size: 35px;
+}
+}
+@media(max-width:520px){
+.getStarted_wrapper > span{
+    font-size: 25px;
+}
+ .journey_card span{
+    font-size: 30px;
+ }
+ .journey_card p{
+    font-size: 14px;
+ }
+ .journey_card img{
+    height:30px;
+ }
+}
+@media(max-width:460px){
+  .journey_card span{
+    font-size: 20px;
+ }
+ .journey_card > div{
+    flex-direction: column;
+ }
+  .journey_card img{
+    width: 30px;
+    height:30px;
+ }
+}
+@media(max-width:390px){
+    .getStarted{
+        width: 100vw;
+        padding: 10px;
+    }
 }
 
 

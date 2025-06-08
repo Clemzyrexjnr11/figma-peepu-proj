@@ -11,4 +11,12 @@ export class NavbarComponent {
  public homepage_navlink = homepage_navlink;
 
   @Input() style: any = {};
+
+  onclickmenubar(){
+   document.querySelector('.aside_nav')?.classList.add('addmenu');
+  }
+  onRemoveMenu(){
+    document.querySelector('.aside_nav')?.classList.remove('addmenu');
+
+  }
 }

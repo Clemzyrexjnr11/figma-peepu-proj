@@ -1,23 +1,23 @@
-<div class="holder h-fit flex gap-6">
- <div class="top w-[867px] h-fit flex flex-col">
+<div class="holder h-fit flex gap-6 max-xl:flex-col">
+ <div class="top w-[867px] h-fit flex flex-col max-xl:w-full">
 
-<h2 class="font-[600] text-[40px] leading-[145%]">
+<h2 class="font-[600] text-[40px] leading-[145%] max-[580px]:text-[30px] max-[450px]:text-[20px] ">
   {{ headerText }}
 </h2>
-<p class="font-[400] text-[18px] leading-[32px] mt-5 mb-10">
+<p class="font-[400] text-[18px] leading-[32px] mt-5 mb-10 max-[580px]:text-[14px] max-[450px]:text-[12px]">
   {{ sub_headerText }}
 </p>
-<ul class="list-none font-[400] text-[18px] gap-[48px] flex flex-col mb-[48px]">
+<ul class="list-none font-[400] text-[18px] gap-[48px] flex flex-col mb-[48px] max-[580px]:text-[14px]">
   @for(item of list; track item.length){
   <li
-    class="align_center text-start gap-[10px] before:content-[url('/images/double-check.png')]"
+    class=" before:content-[url('/images/double-check.png')] remote-list max-[450px]:text-[12px]"
   >
     {{ item }}
   </li>
   }
 </ul>
 <p
-  class="w-[558px] h-[84px] p-[10px] rounded-md leading-[30px] mb-[48px] bg-[#F3F2F1]"
+  class="w-[558px] h-[84px] p-[10px] rounded-md leading-[30px] mb-[48px] bg-[#F3F2F1] max-[725px]:w-[100%] max-[490px]:text-[12px] max-[490px]:leading-4"
 >
   {{ comment }}
 </p>
@@ -27,7 +27,7 @@
   >{{ btnlink_content }}</a
 >
 </div>
-<div class="my-auto">
-<img [src]="imagePath" alt="" class="h-[500px] w-[500px] object-contain {{styles.imagestyle}}" />
+<div class=" my-auto w-100">
+<img [src]="imagePath" alt="" class=" w-[500px] object-contain {{styles.imagestyle}} max-xl:w-full" />
 </div>
 </div>

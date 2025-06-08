@@ -1,16 +1,16 @@
 <section class="getStarted">
   <div class="getStarted_wrapper">
-    <p>Ready to get started</p>
-    <span>Choose your journey</span>
-    <div class="journey_card_holder">
+    <p class="text-center">Ready to get started</p>
+    <span class="text-center">Choose your journey</span>
+    <div class="journey_card_holder max-[972px]:flex-col">
       @for(item of card_content; track item.length){
       <div
-        class="journey_card bg-[#E79605] h-[222px] w-[503px] p-[24px_40px] rounded-[18px] flex flex-col gap-[15px]"
+        class="journey_card bg-[#E79605] h-[222px] w-[503px] p-[24px_40px] rounded-[18px] flex flex-col gap-[15px] max-[660px]:w-fit"
       >
         <span class="font-[600] text-[36px]">{{item.header}}</span>
-        <div class="flex gap-6">
-          <p class="max-w-[330px]">{{item.sub_text}}</p>
-          <img src="images/dark-arrow-right.png"alt="" class="" />
+        <div class="flex gap-4 h-fit">
+          <p class="">{{item.sub_text}}</p>
+          <img src="images/dark-arrow-right.png"alt="" class="h-fit" />
         </div>
       </div>
     }

@@ -72,3 +72,20 @@
 
 }
 }
+@media(max-width:720px){
+    .peepu_logo{
+        display: none;
+    }
+    .link_holder .top_section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+    }
+.link_holder .top_section ul li{
+  font-size: 14px;
+}
+.link_holder .bottom_section{
+    flex-direction: column;
+    gap: 10px;
+}
+}

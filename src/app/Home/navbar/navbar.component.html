@@ -1,6 +1,14 @@
-<nav class=" w-[90vw] {{style.navbar}}">
+<nav
+  class=" w-[90vw] max-lg:w-[100vw] max-lg:rounded-none max-lg:px-6 relative {{
+    style.navbar
+  }}"
+>
   <span>
-    <img src="images/comp_logo.png" alt="" class="h-[50px]" />
+    <img
+      src="images/comp_logo.png"
+      alt=""
+      class="h-[50px] max-[420px]:w-[100px]"
+    />
   </span>
   <ul class="flex list-none gap-[30px]">
     <li><a [routerLink]="''">Home</a></li>
@@ -8,9 +16,26 @@
     <li><a href="#">Post Jobs</a></li>
     <li><a [routerLink]="['../resources']">Resources</a></li>
     <li><a [routerLink]="['../community']">Community</a></li>
-    <li><a href="#" class="login_btn {{style.login_btn}}">Login</a></li>
-    <!-- @for(item of homepage_navlink; track item.length){
-      <li><a [routerLink]="item.route" class="">{{item.link}}</a></li>
-    } -->
+    <li><a href="#" class="login_btn {{ style.login_btn }}">Login</a></li>
+    <li (click)="onclickmenubar()">
+      <img src="images/menu-bar-icon.png" alt="" class="w-[40px]" />
+    </li>
   </ul>
+
+  <div class="aside_nav">
+    <ul>
+      <img
+        src="images/cancel.png"
+        alt=""
+        class="w-[50px]"
+        (click)="onRemoveMenu()"
+      />
+      <li><a [routerLink]="''">Home</a></li>
+      <li><a [routerLink]="['../browse-jobs']">Browse Jobs</a></li>
+      <li><a href="#">Post Jobs</a></li>
+      <li><a [routerLink]="['../resources']">Resources</a></li>
+      <li><a [routerLink]="['../community']">Community</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </div>
 </nav>
