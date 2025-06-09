@@ -9,11 +9,11 @@
 <main>
   <app-hero-section
     [styles]="{
-    hero_container:'h-[80vh] w-[80vw] my-[50px] flex mx-auto ', 
-    left_div:'w-[65%] h-[100%] flex flex-col gap-[30px]',
-    hero_title:' font-[600] text-[64px] max-xl:text-[40px]',
-    paragraph: 'text-[24px] mt-[19px] mb-[50px] leading-[42px]',
-    right_div:'w-[35%]',
+    hero_container:'h-fit w-[80vw] gap-6 my-[50px] flex mx-auto items-center max-lg:flex-col', 
+    left_div:'w-[65%] h-[100%] flex flex-col gap-[30px] max-lg:order-2 max-lg:w-[100%]',
+    hero_title:' font-[600] text-[64px] max-xl:text-[40px] max-sm:text-[30px]',
+    paragraph: 'text-[24px] mt-[19px] mb-[50px] leading-[42px] max-sm:text-[15px]',
+    right_div:'w-[35%] max-lg:w-[100%] max-lg:order-1',
    }"
     [hero_title]="`Stop Guessing. Start Getting Hired.`"
     [content]="{
@@ -25,35 +25,35 @@
     <app-button
       [btn_content]="'Join the community'"
       [btn_type]="'button'"
-      [styles]="` bg-orange_color  after:content-[url('/images/dark-arrow-up.png')] `"
+      [styles]="` bg-orange_color  after:content-[url('/images/dark-arrow-up.png')] max-[334px]:after:content-none`"
     />
   </app-hero-section>
 
   <section
     class="peepu_comm flex flex-col bg-jobBtns_bg h-fit py-[60px] w-[100vw]"
   >
-    <div class="w-[70%] flex gap-[20px] mx-auto h-[60vh] mb-[100px]">
+    <div class="w-[70%] flex gap-[20px] mx-auto h-fit items-center mb-[100px] max-xl:w-[95%] max-md:flex-col">
       <div class="h-[100%]">
         <img src="images/comm_img1.png" alt="" class="h-[100%]" />
       </div>
-      <div class="flex flex-col w-[60%] gap-4">
-        <h2 class="font-[600] text-[30px]">
+      <div class="flex flex-col w-[60%] gap-4 max-md:w-[100%]">
+        <h2 class="font-[600] text-[30px] max-md:text-[25px]">
           The Peepuu Community is your monthly support system
         </h2>
-        <p class="text-lite_gray text-[20px]">
+        <p class="text-lite_gray text-[20px] max-md:text-[15px]">
           A paid membership that combines expert coaching, live guidance,
           accountability, and real feedback to help you go from stuck to hired.
         </p>
-        <span class="font-[600] text-[25px] italic max-w-[70%]"
+        <span class="font-[600] text-[25px] italic max-w-[70%] max-lg:text-[20px]"
           >You don't have to do this alone. And you shouldn't.</span
         >
       </div>
     </div>
 
-    <div class="w-[90vw] mx-auto h-fit gap-4 grid grid-cols-3 mb-[100px]">
+    <div class="w-[90vw] mx-auto h-fit gap-4 grid grid-cols-3 mb-[100px] max-xl:grid-cols-2 max-md:grid-cols-1" >
       @for(item of comm_card_content; track item.length){
       <div
-        class="grid_box h-[250px] w-[350px] flex flex-col p-4 gap-4 rounded-lg shadow-md"
+        class="grid_box h-fit flex flex-col p-6 gap-4 rounded-lg shadow-md"
       >
         <img [src]="item.imgPath" alt="" class="w-[50px]" />
         <span class="text-[20px] font-[600]">{{ item.header }}</span>
@@ -63,12 +63,12 @@
       }
     </div>
 
-    <div class="w-[80vw] h-[80vh] mx-auto flex gap-6">
+    <div class="w-[80vw] h-[80vh] mx-auto flex just_align_center gap-6 max-lg:w-[95vw] max-[848px]:flex-col max-[848px]:h-fit">
       <div
-        class="h-[100%] w-[50%] bg-[#FBBF56] rounded-[0px_0px_0px_70px] p-[30px] flex flex-col gap-4"
+        class="h-[100%] w-[50%] bg-[#FBBF56] rounded-[0px_0px_0px_70px] p-[30px] flex flex-col gap-4 max-[848px]:w-[90%]"
       >
-        <span class="font-[600] text-[30px]"> This is for you if</span>
-        <ul class="flex flex-col gap-6">
+        <span class="font-[600] text-[30px] max-[450px]:text-[20px]"> This is for you if</span>
+        <ul class="flex flex-col gap-6 max-[450px]:text-[13px]">
           <li class="testimonial_list">
             You're tired of applying and hearing nothing back
           </li>
@@ -81,9 +81,9 @@
         </ul>
       </div>
       <div
-        class="h-[100%] p-[30px] w-[50%] bg-white rounded-[0px_70px_0px_0px] flex flex-col gap-4"
+        class="h-[100%] p-[30px] w-[50%] bg-white rounded-[0px_70px_0px_0px] flex flex-col gap-4 max-[848px]:w-[90%]"
       >
-        <span class="font-[600] text-[30px] mb-[20px]"
+        <span class="font-[600] text-[30px] mb-[20px] max-[450px]:text-[20px]"
           >What Our Members Say</span
         >
         <div class="flex flex-col">
@@ -91,7 +91,7 @@
             <img src="images/profile_icon.png" alt="" class="w-[50px]" />
             <p>Ozioma A.</p>
           </div>
-          <p class="mb-[20px]">
+          <p class="mb-[20px] max-[450px]:text-[12px]">
             "I'd been applying for 6 months with nothing. One month in the
             community, I got two interviews and more clarity than ever."
           </p>
@@ -102,7 +102,7 @@
             <img src="images/profile_icon.png" alt="" class="w-[50px]" />
             <p>Tomisin O.</p>
           </div>
-          <p class="mb-[20px]">
+          <p class="mb-[20px] max-[450px]:text-[12px] ">
             "It feels like I finally have a system that's made for Nigerians
             like me. This is different."
           </p>
@@ -114,8 +114,8 @@
   <section
     class="just_align_center h-[70vh] w-[100vw] bg-[url('/images/join_comm_img.png')] bg-no-repeat bg-center"
   >
-    <div class="w-[70%] h-[80%] gap-4 just_align_center flex-col">
-      <span class="font-[600] text-[38px] text-white text-center"
+    <div class="w-[70%] h-[80%] gap-4 just_align_center flex-col max-sm:w-[90%]">
+      <span class="font-[600] text-[38px] text-white text-center max-sm:text-[25px]"
         >Join Now — because every month you delay is a missed chance to earn in
         dollars.</span
       >
@@ -130,7 +130,7 @@
   </section>
 </main>
 
-<footer class="h-fit w-full p-6 align_center justify-between">
+<footer class="h-fit w-full p-6 gap-4 align_center justify-between max-sm:flex-col">
   <div class="h-fit w-[100%] flex gap-4 text-lite_gray">
     <a href="">Resources</a>
     <a href="">Need Help?</a>
