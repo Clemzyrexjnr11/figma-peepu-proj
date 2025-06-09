@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { NavbarComponent } from '../../Home/navbar/navbar.component';
 import { HeroSectionComponent } from '../../Home/hero-section/hero-section.component';
 @Component({
@@ -8,6 +8,8 @@ import { HeroSectionComponent } from '../../Home/hero-section/hero-section.compo
   styleUrl: './resource.component.css'
 })
 export class ResourceComponent {
+  public hero_list:any = []
+
   public hero_list_content:any = [
     'You’re not lazy', 'You’re not unqualified', 'You just haven\'t had the right strategy or support.'
   ]
